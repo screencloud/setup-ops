@@ -6792,11 +6792,12 @@ module.exports = require("util");
 const core = __webpack_require__(470)
 const github = __webpack_require__(469)
 
-(async function() {
+!async function exec() {
 
     console.log("Installing ScreenCloud Ops")
 
-})()
+}()
+
 
 /***/ }),
 
