@@ -1,8 +1,12 @@
-const core = require("@actions/core")
-const github = require("@actions/github")
+const util = require("util");
+const spawn = require("./spawn").spawn;
 
 !async function exec() {
 
-    console.log("Installing ScreenCloud Ops")
+    console.log("Bootstrapping ScreenCloud Ops Environment")
+
+    await spawn("npm", ["install", "-g", "@screencloud/ops-cli"])
+    await spawn("npm", ["install", "-g", "semantic-release"])
+    await spawn("npm", ["install", "-g", "@semantic-release/exec"])
 
 }()
