@@ -1,0 +1,33 @@
+{
+  "name": "setup-ops",
+  "version": "1.0.0",
+  "description": "Github Actions that setups up the operations environment, installing the necessary tools for the actions",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/screencloud/setup-ops.git"
+  },
+  "keywords": [
+    "ScreenCloud",
+    "Operations",
+    "Github",
+    "Actions"
+  ],
+  "author": "ScreenCloud",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/screencloud/setup-ops/issues"
+  },
+  "homepage": "https://github.com/screencloud/setup-ops#readme",
+  "scripts": {
+    "build": "ncc build src/index.js"
+  },
+  "dependencies": {
+    "@actions/core": "^1.2.4",
+    "@actions/github": "^3.0.0"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.22.3",
+    "semantic-release": "^17.0.8"
+  }
+}

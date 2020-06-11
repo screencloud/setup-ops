@@ -1,0 +1,6 @@
+name: "Setup Ops Environment"
+description: "Installs the pre-requisite dependencies and tools for ScreenCloud ops"
+
+runs:
+  using: "node12"
+  main: "dist/index.js"
