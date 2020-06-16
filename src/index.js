@@ -1,4 +1,3 @@
-const util = require("util");
 const spawn = require("./spawn").spawn;
 
 !async function exec() {
@@ -8,5 +7,6 @@ const spawn = require("./spawn").spawn;
     await spawn("npm", ["install", "-g", "@screencloud/ops-cli"])
     await spawn("npm", ["install", "-g", "semantic-release"])
     await spawn("npm", ["install", "-g", "@semantic-release/exec"])
+    await spawn("npm", ["install", "-g", "@screencloud/publish-package"])
 
 }()
