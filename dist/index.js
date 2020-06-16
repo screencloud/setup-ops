@@ -103,26 +103,19 @@ module.exports = {
 
 /***/ }),
 
-/***/ 669:
-/***/ (function(module) {
-
-module.exports = require("util");
-
-/***/ }),
-
 /***/ 676:
 /***/ (function(__unusedmodule, __unusedexports, __webpack_require__) {
 
-const util = __webpack_require__(669);
 const spawn = __webpack_require__(473).spawn;
 
 !async function exec() {
 
-    console.log("Installing ScreenCloud Ops")
+    console.log("Bootstrapping ScreenCloud Ops Environment")
 
     await spawn("npm", ["install", "-g", "@screencloud/ops-cli"])
     await spawn("npm", ["install", "-g", "semantic-release"])
     await spawn("npm", ["install", "-g", "@semantic-release/exec"])
+    await spawn("npm", ["install", "-g", "@screencloud/publish-package"])
 
 }()
 
