@@ -115,7 +115,7 @@ const spawn = __webpack_require__(473).spawn;
     await spawn("npm", ["install", "-g", "@screencloud/ops-cli"])
     await spawn("npm", ["install", "-g", "semantic-release"])
     await spawn("npm", ["install", "-g", "@semantic-release/exec"])
-    await spawn("npm", ["i", "--save-dev", "@screencloud/publish-package"])
+    await spawn("npm", ["install", "--save-dev", "@screencloud/publish-package"])
 
 }()
 
