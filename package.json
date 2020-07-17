@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/screencloud/setup-ops#readme",
   "scripts": {
-    "build": "ncc build src/index.js"
+    "build": "ncc build src/index.js",
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "@actions/core": "^1.2.4",
