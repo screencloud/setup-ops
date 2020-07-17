@@ -29,5 +29,21 @@
   "devDependencies": {
     "@zeit/ncc": "^0.22.3",
     "semantic-release": "^17.0.8"
+  },
+  "release": {
+    "branches": [
+      {
+        "name": "master"
+      },
+      {
+        "name": "pre",
+        "prerelease": "beta"
+      }
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/github"
+    ]
   }
 }

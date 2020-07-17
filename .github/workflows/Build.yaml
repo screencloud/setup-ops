@@ -1,0 +1,24 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - pre
+      - master
+
+jobs:
+
+  build:
+    # Run when we push a commit to any branch or open/update a PR that isn't merging from pre or master (avoid redundant executions)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "13.x"
+      - run: npm ci
+      - run: npm run build
+      - run: npm run semantic-release
+        env:
+          NPMJS_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
