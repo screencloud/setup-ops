@@ -24,12 +24,12 @@
     "semantic-release": "semantic-release"
   },
   "dependencies": {
-    "@actions/core": "^1.2.4",
-    "@actions/github": "^3.0.0"
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0"
   },
   "devDependencies": {
     "@zeit/ncc": "^0.22.3",
-    "semantic-release": "^17.0.8"
+    "semantic-release": "^17.1.2"
   },
   "release": {
     "branches": [
