@@ -4,7 +4,7 @@ const spawn = require("./spawn").spawn;
 
     console.log("Bootstrapping ScreenCloud Ops Environment")
 
-    await spawn("npm", ["install", "-g", "@screencloud/ops-cli@1.0.2-beta.1"])
+    await spawn("npm", ["install", "-g", "@screencloud/ops-cli@v1.0.2-beta.1"])
     await spawn("npm", ["install", "-g", "semantic-release"])
     await spawn("npm", ["install", "-g", "@semantic-release/exec"])
     await spawn("npm", ["install", "-g", "@screencloud/publish-package"])
