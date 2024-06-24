@@ -111,7 +111,7 @@ const spawn = __webpack_require__(473).spawn;
 !async function exec() {
 
     console.log("Bootstrapping ScreenCloud Ops Environment")
-
+    await spawn("npm", ["install", "-g", "aws-cdk-lib@2.146.0"])
     await spawn("npm", ["install", "-g", "@screencloud/ops-cli@1.1.0-beta.11"])
     await spawn("npm", ["install", "-g", "semantic-release"])
     await spawn("npm", ["install", "-g", "@semantic-release/exec"])
