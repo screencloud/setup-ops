@@ -11,4 +11,3 @@ const spawn = require("./spawn").spawn;
     await spawn("npm", ["install", "-g", "@screencloud/finalize-build-cli"])
 
 }()
- 
