@@ -1,65 +1,10 @@
-module.exports =
-/******/ (function(modules, runtime) { // webpackBootstrap
-/******/ 	"use strict";
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		var threw = true;
-/******/ 		try {
-/******/ 			modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/ 			threw = false;
-/******/ 		} finally {
-/******/ 			if(threw) delete installedModules[moduleId];
-/******/ 		}
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	__webpack_require__.ab = __dirname + "/";
-/******/
-/******/ 	// the startup function
-/******/ 	function startup() {
-/******/ 		// Load entry module and return exports
-/******/ 		return __webpack_require__(676);
-/******/ 	};
-/******/
-/******/ 	// run startup
-/******/ 	return startup();
-/******/ })
-/************************************************************************/
-/******/ ({
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
 
-/***/ 129:
-/***/ (function(module) {
+/***/ 90:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
-module.exports = require("child_process");
-
-/***/ }),
-
-/***/ 473:
-/***/ (function(module, __unusedexports, __webpack_require__) {
-
-const spawn_process = __webpack_require__(129).spawn
+const spawn_process = (__nccwpck_require__(317).spawn)
 
 module.exports = {
     spawn: function spawn(cmd, args, opts) {
@@ -103,16 +48,60 @@ module.exports = {
 
 /***/ }),
 
-/***/ 676:
-/***/ (function(__unusedmodule, __unusedexports, __webpack_require__) {
+/***/ 317:
+/***/ ((module) => {
 
-const spawn = __webpack_require__(473).spawn;
+"use strict";
+module.exports = require("child_process");
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __nccwpck_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		var threw = true;
+/******/ 		try {
+/******/ 			__webpack_modules__[moduleId](module, module.exports, __nccwpck_require__);
+/******/ 			threw = false;
+/******/ 		} finally {
+/******/ 			if(threw) delete __webpack_module_cache__[moduleId];
+/******/ 		}
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/compat */
+/******/ 	
+/******/ 	if (typeof __nccwpck_require__ !== 'undefined') __nccwpck_require__.ab = __dirname + "/";
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+const spawn = (__nccwpck_require__(90).spawn);
 
 !async function exec() {
 
     console.log("Bootstrapping ScreenCloud Ops Environment")
     await spawn("node", ["-v"])
-    await spawn("npm", ["install", "-g", "@screencloud/ops-cli@1.1.0-beta.21"])
+    await spawn("npm", ["install", "-g", "@screencloud/ops-cli@1.1.0-beta.22"])
     await spawn("npm", ["install", "-g", "semantic-release"])
     await spawn("npm", ["install", "-g", "@semantic-release/exec"])
     await spawn("npm", ["install", "-g", "@screencloud/publish-package"])
@@ -120,7 +109,6 @@ const spawn = __webpack_require__(473).spawn;
 
 }()
 
-
-/***/ })
-
-/******/ });
+module.exports = __webpack_exports__;
+/******/ })()
+;
