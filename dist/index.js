@@ -101,7 +101,7 @@ const spawn = (__nccwpck_require__(90).spawn);
 
     console.log("Bootstrapping ScreenCloud Ops Environment")
     await spawn("node", ["-v"])
-    await spawn("npm", ["install", "-g", "@screencloud/ops-cli@1.1.0-beta.22"])
+    await spawn("npm", ["install", "-g", "@screencloud/ops-cli@1.1.0-beta.25"])
     await spawn("npm", ["install", "-g", "semantic-release"])
     await spawn("npm", ["install", "-g", "@semantic-release/exec"])
     await spawn("npm", ["install", "-g", "@screencloud/publish-package"])
