@@ -2,5 +2,5 @@ name: "Setup Ops Environment"
 description: "Installs the pre-requisite dependencies and tools for ScreenCloud ops"
 
 runs:
-  using: "node20"
+  using: "node24"
   main: "dist/index.js"
